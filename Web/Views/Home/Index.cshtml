@@ -1,0 +1,47 @@
+﻿@model List<Model.Alumno>
+@{
+    ViewBag.Title = "Paciente";
+}
+
+<div class="well well-sm">
+    <div class="row">
+        <div class="col-xs-10">
+            <h2>Pacientes</h2>
+        </div>
+        <div class="col-xs-2 text-right">
+            <a class="btn btn-primary" href="~/home/crud">Nuevo registro</a>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width:200px;">Nombre</th>
+            <th>Apellido</th>
+            <th style="width:200px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach (var a in Model)
+            {
+                <tr>
+                    <td>@a.Nombre</td>
+                    <td>@a.Apellido</td>
+                    <td class="text-right">
+                        <a class="btn btn-default btn-success" href="~/home/ver/@a.id" title="Visualizar">
+                            <i class="glyphicon glyphicon-eye-open"></i>
+                        </a>
+                        <a class="btn btn-default" href="~/home/crud/@a.id" title="Editar">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                        </a>
+                    </td>
+                </tr>
+                
+            }
+            
+        
+    </tbody>
+
+</table>
