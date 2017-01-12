@@ -32,6 +32,16 @@ namespace Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Alumno>()
+                .Property(e => e.Rut)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Alumno>()
+                .Property(e => e.Peso);
+
+            modelBuilder.Entity<Alumno>()
+                .Property(e => e.Edad);
+
+            modelBuilder.Entity<Alumno>()
                 .HasMany(e => e.Adjunto)
                 .WithRequired(e => e.Alumno)
                 .HasForeignKey(e => e.Alumno_id);

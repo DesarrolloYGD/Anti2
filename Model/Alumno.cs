@@ -29,6 +29,16 @@ namespace Model
         [StringLength(100)]
         public string Apellido { get; set; }
 
+        [Required]
+        [StringLength(100)]
+        public string Rut { get; set; }
+
+        [Required]
+        public int Peso { get; set; }
+
+        [Required]
+        public int Edad { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Adjunto> Adjunto { get; set; }
 

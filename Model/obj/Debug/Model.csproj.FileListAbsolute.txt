@@ -8,3 +8,13 @@ c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\EntityF
 c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\obj\Debug\Model.dll
 c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\obj\Debug\Model.pdb
 c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\Model.dll.config
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\Model.dll
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\Model.pdb
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.dll
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.xml
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\obj\Debug\Model.dll
+C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\obj\Debug\Model.pdb

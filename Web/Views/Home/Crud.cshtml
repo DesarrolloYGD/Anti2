@@ -5,7 +5,7 @@
 }
 
 <ol class="breadcrumb">
-    <li><a href="~/">Home</a></li>
+    <li><a href="~/Home">Home</a></li>
     <li class="active">@(Model.id > 0 ? Model.Nombre + " " + Model.Apellido : "Nuevo Registro")</li>
 </ol>
 
@@ -16,6 +16,11 @@
         <div class="panel-heading">Información Personal</div>
         <div class="panel-body">
             <div class="form-group">
+                @Html.LabelFor(x => x.Rut)
+                @Html.TextBoxFor(x => x.Rut, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Rut, null, new { @class = "label label-danger" })
+            </div>
+            <div class="form-group">
                 @Html.LabelFor(x => x.Nombre)
                 @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
                 @Html.ValidationMessageFor( x => x.Nombre, null, new { @class = "label label-danger"})
@@ -24,6 +29,16 @@
                 @Html.LabelFor(x => x.Apellido)
                 @Html.TextBoxFor(x => x.Apellido, new { @class = "form-control" })
                 @Html.ValidationMessageFor(x => x.Apellido, null, new { @class = "label label-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Edad)
+                @Html.TextBoxFor(x => x.Edad, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Edad, null, new { @class = "label label-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Peso)
+                @Html.TextBoxFor(x => x.Peso, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Peso, null, new { @class = "label label-danger" })
             </div>
         </div>
     </div>

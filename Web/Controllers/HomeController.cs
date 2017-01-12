@@ -1,6 +1,9 @@
-﻿using Model;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +19,11 @@ namespace Web.Controllers
             return View(alumno.Listar());
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
         public ActionResult Crud2(int id)
         {
             return View(alumno.Obtener(id));
@@ -25,6 +33,48 @@ namespace Web.Controllers
         public ActionResult Ver(int id)
         {
             return View(alumno.Obtener(id));
+        }
+
+        public ActionResult Exportar(int id)
+        {
+            var alum = alumno.Obtener(id);
+            
+
+            //ITextSharp
+            // Creamos el documento con el tamaño de página tradicional
+            Document doc = new Document(PageSize.LETTER);
+            MemoryStream stream = new MemoryStream();
+
+            
+
+            try
+            {
+                doc.AddTitle("Hoja-clinica" + alum.Rut + "_" + DateTime.Now);
+                doc.AddCreator("Medico");
+
+                PdfWriter pdfWriter = PdfWriter.GetInstance(doc, stream);
+                pdfWriter.CloseStream = false;
+
+                doc.Open();
+                doc.Add(new Paragraph("Ficha Clinica Paciente N° " + alum.id));
+                doc.Add(Chunk.NEWLINE);
+                doc.Close();
+            }
+            catch (DocumentException de)
+            {
+                Console.Error.WriteLine(de.Message);
+            }
+            catch (IOException ioe)
+            {
+                Console.Error.WriteLine(ioe.Message);
+            }
+
+            doc.Close();
+
+            stream.Flush(); //Always catches me out
+            stream.Position = 0; //Not sure if this is required
+
+            return File(stream, "application/pdf", "Hoja-clinica" + alum.Rut + "_" + DateTime.Now+".pdf");
         }
 
 
@@ -57,7 +107,7 @@ namespace Web.Controllers
             if (ModelState.IsValid)
             {
                 model.Guardar();
-                return Redirect("~/Home/Crud/" + model.id);
+                return Redirect("~/Home/Ver/" + model.id);
             }
             else
             {
