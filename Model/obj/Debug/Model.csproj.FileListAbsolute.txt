@@ -1,20 +1,10 @@
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\Model.dll.config
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\Model.dll
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\Model.pdb
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\EntityFramework.dll
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\EntityFramework.SqlServer.dll
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\EntityFramework.xml
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\bin\Debug\EntityFramework.SqlServer.xml
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\obj\Debug\Model.dll
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\obj\Debug\Model.pdb
-c:\Users\marco\documents\visual studio 2015\Projects\Web\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\Model.dll.config
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\Model.dll
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\Model.pdb
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.dll
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.xml
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\obj\Debug\Model.dll
-C:\Users\Desarrollo\Documents\GitHub\Anti2\Model\obj\Debug\Model.pdb
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\bin\Debug\Model.dll.config
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\bin\Debug\Model.dll
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\bin\Debug\Model.pdb
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\bin\Debug\EntityFramework.dll
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\bin\Debug\EntityFramework.xml
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\obj\Debug\Model.dll
+c:\users\marco\documents\visual studio 2015\Projects\AntiAging2.0\Model\obj\Debug\Model.pdb
+C:\Users\marco\Documents\visual studio 2015\Projects\AntiAging2.0\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

@@ -13,9 +13,8 @@ namespace Model
         }
 
         public virtual DbSet<Adjunto> Adjunto { get; set; }
-        public virtual DbSet<Alumno> Alumno { get; set; }
-        public virtual DbSet<Curso> Curso { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Examen> Examen { get; set; }
+        public virtual DbSet<Paciente> Paciente { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -23,37 +22,31 @@ namespace Model
                 .Property(e => e.Archivo)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Alumno>()
+            modelBuilder.Entity<Examen>()
                 .Property(e => e.Nombre)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Alumno>()
+            modelBuilder.Entity<Paciente>()
+                .Property(e => e.Nombre)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Paciente>()
                 .Property(e => e.Apellido)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Alumno>()
+            modelBuilder.Entity<Paciente>()
                 .Property(e => e.Rut)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Alumno>()
-                .Property(e => e.Peso);
-
-            modelBuilder.Entity<Alumno>()
-                .Property(e => e.Edad);
-
-            modelBuilder.Entity<Alumno>()
+            modelBuilder.Entity<Paciente>()
                 .HasMany(e => e.Adjunto)
-                .WithRequired(e => e.Alumno)
+                .WithRequired(e => e.Paciente)
                 .HasForeignKey(e => e.Alumno_id);
 
-            modelBuilder.Entity<Alumno>()
-                .HasMany(e => e.Curso)
-                .WithMany(e => e.Alumno)
-                .Map(m => m.ToTable("AlumnoCurso"));
-
-            modelBuilder.Entity<Curso>()
-                .Property(e => e.Nombre)
-                .IsUnicode(false);
+            modelBuilder.Entity<Paciente>()
+                .HasMany(e => e.Examen)
+                .WithMany(e => e.Paciente)
+                .Map(m => m.ToTable("PacienteExamen"));
         }
     }
 }

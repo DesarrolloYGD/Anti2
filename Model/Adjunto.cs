@@ -17,6 +17,6 @@ namespace Model
         [StringLength(200)]
         public string Archivo { get; set; }
 
-        public virtual Alumno Alumno { get; set; }
+        public virtual Paciente Paciente { get; set; }
     }
 }

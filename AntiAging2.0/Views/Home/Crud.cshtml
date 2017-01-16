@@ -1,0 +1,80 @@
+﻿@model Model.Paciente
+@{
+    ViewBag.Title = (Model.id > 0 ? Model.Nombre + " " + Model.Apellido : "Nuevo Registro");
+    List<Model.Examen> examenes = ViewBag.Examenes;
+}
+
+<ol class="breadcrumb">
+    <li><a href="~/Home">Home</a></li>
+    <li class="active">@(Model.id > 0 ? Model.Nombre + " " + Model.Apellido : "Nuevo Registro")</li>
+</ol>
+
+@using (Html.BeginForm("Guardar", "Home", FormMethod.Post, new { id = "frm-alumno" }))
+{
+    @Html.HiddenFor(x => x.id)
+    <div class="panel panel-default">
+        <div class="panel-heading">Información Personal</div>
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.LabelFor(x => x.Rut)
+                @Html.TextBoxFor(x => x.Rut, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Rut, null, new { @class = "label label-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Nombre)
+                @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "label label-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Apellido)
+                @Html.TextBoxFor(x => x.Apellido, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Apellido, null, new { @class = "label label-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Edad)
+                @Html.TextBoxFor(x => x.Edad, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Edad, null, new { @class = "label label-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Peso)
+                @Html.TextBoxFor(x => x.Peso, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Peso, null, new { @class = "label label-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Lista de exámenes</div>
+        <div class="panel-body">
+
+            <ul class="list-group">
+                @foreach (var c in examenes)
+                {
+                    var tomado = false;
+                    foreach (var c2 in Model.Examen)
+                    {
+                        if (c.id == c2.id)
+                        {
+                            tomado = true;
+                            break;
+                        }
+                    }
+                    <li class="list-group-item">
+                        <label><input type="checkbox" @(tomado ? "checked" : "") name="examenes" value="@c.id" /> @c.Nombre</label>
+                    </li>
+                }
+            </ul>
+            @Html.ValidationMessage("examen", new { @class = "label label-danger" })
+        </div>
+    </div>
+
+    <div class="text-right">
+        @if (Model.id > 0)
+        {
+            <a onclick="return confirm('¿Esta seguro que desea eliminar el paciente?');" href="~/home/eliminar/@Model.id" class="btn btn-danger">Eliminar</a>
+        }
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+}
+
